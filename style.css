@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+h1 {
+    color: cornflowerblue;
+    text-align: center;
+}
+
+.navbar ul {
+    margin: auto;
+    text-align: center;
+}
+
+.navbar ul li {
+    display: inline;
+    font-size: 28px;
+    margin-left: 15px;
+}
+
+.navbar ul li:hover {
+    cursor: pointer;
+
+    text-decoration: underline;
+}
+
+.banner h2 {
+    text-align: center;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact_us {
+    margin-top: 5px;
+    text-align: center;
+    color: cornflowerblue;
+    text-decoration: underline;
+}
+
+.form {
+    /* display: flex;
+    flex-direction: column; */
+
+    padding-top: 15px;
+    position: relative;
+    padding-bottom: 15px;
+    margin-left: 23rem;
+    margin-right: 23rem;
+}
+
+.content {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.Email {
+    font-weight: bold;
+    width: 2%;
+}
+
+.write {
+    margin-top: 2px;
+    font-weight: bold;
+}
+
+#Email {
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.img {
+    height: 23rem;
+}
+
+.details {
+    resize: none;
+}
+
+.submitbtn {
+    margin-top: 2%;
+    margin-left: 69%;
+    width: 23%;
+}
+
+.EmailValid {
+    color: green;
+}
+
+.EmailinValid {
+    color: rgb(226, 45, 45);
+}
+
+.card {
+    margin-top: 10px !important;
+    gap: 1px;
+    margin-left: 23px;
+    margin-left: -23px;
+}
+
+.ListofProduct {
+    text-align: center;
+    color: blueviolet;
+}
+
+.row {
+    margin-left: 70px !important;
+}
+
+.pricebtn {
+    margin-left: 75px;
+}
+
+.NavbarIcon {
+    height: 30px;
+    width: 30px;
+}
+
+.emptyForm {
+    text-align: center;
+}
+
+@media (min-width: 1025px) {
+    .h-custom {
+        height: 100vh !important;
+    }
+}
+
+.rounded-3 {
+    margin-left: 10px;
+    border-radius: 0.3rem !important;
+}
