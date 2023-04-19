@@ -2,64 +2,57 @@ let Subtotal = document.getElementById("Subtotal");
 let Shipping = document.getElementById("Shipping");
 let Total = document.getElementById("Total");
 let FinalCheckout = document.getElementById("FinalCheckout");
+let arr = [];
+let Itemname = JSON.parse(localStorage.getItem("Products"));
 
 function Getitems() {
   let PurchaseProducts = document.getElementById("PurchaseProducts");
-  let Itemname = JSON.parse(localStorage.getItem("Products"));
+  let html = "";
+  Itemname.forEach((element, index) => {
+    PurchaseProducts.innerHTML += `<div class="card-body">
+    <div class="d-flex justify-content-between">
+      <div class="d-flex flex-row align-items-center">
+        <div>
+          <img
+            src="${element.pimage}"
+            class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
+        </div>
+        <div class="ms-3">
+          <h5>${element.pname}</h5>
+        </div>
+      </div>
+      <div class="d-flex flex-row align-items-center">
+        <div style="width: 50px;">
+        </div>
+        <div style="width: 80px;">
+          <h5 class="mb-0">${element.pprice}$</h5>
+        </div>
+        <img class="trash" src="./images/trash.png" onClick="trash(${index})">
+      </div>
+    </div>
+    </div>`;
+  });
+}
 
+function trash(index) {
   console.log(Itemname);
+  Itemname.splice(index, 1);
+  console.log(Itemname);
+  localStorage.setItem("Products", JSON.stringify(Itemname));
+  location.reload();
+}
 
-  PurchaseProducts.innerHTML = `<div class="card-body">
-  <div class="d-flex justify-content-between">
-    <div class="d-flex flex-row align-items-center">
-      <div>
-        <img
-          src="${Itemname.Itemimg}"
-          class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
-      </div>
-      <div class="ms-3">
-        <h5>${Itemname.Itemname}</h5>
-      </div>
-    </div>
-    <div class="d-flex flex-row align-items-center">
-      <div style="width: 50px;">
-      </div>
-      <div style="width: 80px;">
-        <h5 class="mb-0">${Itemname.Itemprice}$</h5>
-      </div>
-      <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
-    </div>
-  </div>
-  </div>`;
-  function UpdatePrice() {
-    let a = `${Itemname.Itemprice}`;
-    let b = 20;
-    let c = eval(a) + (b);
-    console.log(c);
-    Subtotal.insertAdjacentHTML("afterend", `$${Itemname.Itemprice}`);
-    Total.insertAdjacentHTML("afterend", c);
-    FinalCheckout.insertAdjacentHTML("afterend", c);
+function sum_of_products() {
+  let sum =0;
+  Itemname.forEach((element) => {
+    arr.push(element.pprice);
+  });
+  for (let i = 0; i < arr.length; i++) {
+    // sum.replace("$", "");
+    sum=arr[i];
   }
-  UpdatePrice();
+  console.log(sum);
 }
 
 Getitems();
-
-function getdata() {
-  let html = "";
-  fetch("https://fakestoreapi.com/products")
-    .then((res) => res.json())
-    .then((json) =>
-      json.forEach((element, index) => {
-        console.log(element, index);
-        container.innerHTML += `<div class="card container-fluid "style="width: 18rem;" onClick="CardSelect('${element.title}');">
-                <img src="${element.image}" class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">${element.title}</h5>
-                 <p class="card-text">${element.description}</p>
-                 <a href="#" class="btn btn-primary pricebtn">${element.price}$</a>
-                </div>
-                </div>`;
-      })
-    );
-}
+sum_of_products();

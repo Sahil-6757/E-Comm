@@ -1,140 +1,179 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: whitesmoke;
+  background-color: whitesmoke;
 }
 
 h1 {
-    color: cornflowerblue;
-    text-align: center;
+  color: cornflowerblue;
+  text-align: center;
 }
 
 .navbar ul {
-    margin: auto;
-    text-align: center;
+  margin: auto;
+  text-align: center;
 }
 
 .navbar ul li {
-    display: inline;
-    font-size: 28px;
-    margin-left: 15px;
+  display: inline;
+  font-size: 28px;
+  margin-left: 15px;
 }
 
 .navbar ul li:hover {
-    cursor: pointer;
-
-    text-decoration: underline;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .banner h2 {
-    text-align: center;
+  text-align: center;
 }
 
 .contact {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact_us {
-    margin-top: 5px;
-    text-align: center;
-    color: cornflowerblue;
-    text-decoration: underline;
+  margin-top: 5px;
+  text-align: center;
+  color: cornflowerblue;
+  text-decoration: underline;
 }
 
 .form {
-    /* display: flex;
+  /* display: flex;
     flex-direction: column; */
 
-    padding-top: 15px;
-    position: relative;
-    padding-bottom: 15px;
-    margin-left: 23rem;
-    margin-right: 23rem;
+  padding-top: 15px;
+  position: relative;
+  padding-bottom: 15px;
+  margin-left: 23rem;
+  margin-right: 23rem;
 }
 
 .content {
-    margin-left: 1rem;
-    display: flex;
-    flex-direction: column;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .Email {
-    font-weight: bold;
-    width: 2%;
+  font-weight: bold;
+  width: 2%;
 }
 
 .write {
-    margin-top: 2px;
-    font-weight: bold;
+  margin-top: 2px;
+  font-weight: bold;
 }
 
 #Email {
-    padding: 5px;
-    border-radius: 3px;
+  padding: 5px;
+  border-radius: 3px;
 }
 
 .img {
-    height: 23rem;
+  height: 23rem;
 }
 
 .details {
-    resize: none;
+  resize: none;
 }
 
 .submitbtn {
-    margin-top: 2%;
-    margin-left: 69%;
-    width: 23%;
+  margin-top: 2%;
+  margin-left: 69%;
+  width: 23%;
 }
 
 .EmailValid {
-    color: green;
+  color: green;
 }
 
 .EmailinValid {
-    color: rgb(226, 45, 45);
+  color: rgb(226, 45, 45);
 }
 
 .card {
-    margin-top: 10px !important;
-    gap: 1px;
-    margin-left: 23px;
-    margin-left: -23px;
+  margin-top: 10px !important;
+  gap: 1px;
+  margin-left: 23px;
+  margin-left: -23px;
 }
 
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(44, 54, 57);
+  color: rgb(220, 215, 201);
+}
 .ListofProduct {
-    text-align: center;
-    color: blueviolet;
+  color: blueviolet;
+  text-decoration: underline;
 }
 
 .row {
-    margin-left: 70px !important;
+  margin-left: 70px !important;
+}
+.productlist{
+  margin-left: 23rem !important;
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .productlist{
+   margin-left: 2rem !important;
+  }
+}
+.pricebtn {
+  margin-left: 75px;
 }
 
-.pricebtn {
-    margin-left: 75px;
+.pricebtn:hover {
+  background-color: rgb(162, 123, 92);
 }
 
 .NavbarIcon {
-    height: 30px;
-    width: 30px;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
 }
 
 .emptyForm {
-    text-align: center;
+  text-align: center;
 }
 
 @media (min-width: 1025px) {
-    .h-custom {
-        height: 100vh !important;
-    }
+  .h-custom {
+    height: 100vh !important;
+  }
 }
 
 .rounded-3 {
-    margin-left: 10px;
-    border-radius: 0.3rem !important;
+  margin-left: 10px;
+  border-radius: 0.3rem !important;
+}
+
+.trash {
+  color: rgb(247, 84, 84);
+  height: 15px;
+}
+
+
+.Clothify {
+  color: rgb(89, 0, 255);
+  text-decoration: none;
+}
+.Clothify:hover {
+  text-decoration: underline;
+}
+
+.trash:hover {
+  cursor: pointer;
+  background-color: red;
+}
+#heading{
+  cursor: pointer;
 }
